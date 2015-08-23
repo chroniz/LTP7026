@@ -2,9 +2,9 @@
 <html lang="en">	
 <head>
 	<meta charset="utf-8">
-	<title>Reveal.js 3 Slide Demo</title>
+	<title>Antin loki: LTP7026 Verkkosovelluskehitys</title>
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/black.css" id="theme">	
+	<link rel="stylesheet" href="css/theme/myblack.css" id="theme">	
 	<!--Add support for earlier versions of Internet Explorer -->
 	<!--[if lt IE 9]>
 	<script src="lib/js/html5shiv.js"></script>
@@ -19,22 +19,48 @@
  
 			<!-- ALL SLIDES GO HERE -->
 			<!-- Each section element contains an individual slide -->
-			<section>
+			<section id="slide1">
 				<h1>Antin loki</h1>
-				<p>LTP7026 Verkkosovelluskehitys</p>		
+				<h2>LTP7026 Verkkosovelluskehitys</h3>		
 			</section>
  
-			<section id="show-a-link">
-				<h1>Orientoituminen aiheeseen</h1>
-				<p>Tällä sivustolla pidän kirjaa kurssilla käydyistä asioista.</p>
+			<section id="slide2">
+				<h2>Orientoituminen aiheeseen</h1>
+				<p>Tällä sivustolla pidän kirjaa Verkkosovelluskehitys-kurssilla käydyistä asioista.</p>
 			</section>
  
-			<section>
-				<h1>GitHub Pages ja reveal.js</h1>
-				<p>Yksi kurssin tehtävistä oli valjastaa käyttöön GitHub Pages lokin pitämistä varten.</p>
-				<p>Gh-pagesiin otettiin käyttöön myös reveal.js kirjasto, jolla voidaan tehdä web-pohjaisia esityksiä selainriippumattomasti.</p>
+			<section id="slide3">
+				<section>
+					<h3>GitHub Pages ja reveal.js</h1>
+					<p>Yksi kurssin ensimmäisistä tehtävistä oli valjastaa käyttöön GitHub Pages lokin pitämistä varten.</p>
+					<p>Gh-pagesissa käytettiin myös reveal.js kirjastoa, jolla voidaan tehdä moderneja, selaimessa ajettavia esityksiä.</p>
+					<a href="#" class="navigate-down">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+					</a>
+				</section>
+				<section>
+					<p>Aluksi luotiin GitHub Pagesiin oma repository nimellä username.github.io. Tämän repositoryn alle luotu HTML-sivu näkyy sellaisenaan siirryttäessä</p>
+					<p>kyseiseen osoitteeseen, esim. <a href="http://chroniz.github.io/LTP7026">chroniz.github.io/LTP7026</a></p>
+					</section>
+				<section>
+					<p>Reveal.js asennettiin kloonaamalla tai lataamalla kirjasto GitHubista: <a href="https://github.com/hakimel/reveal.js">hakimel/reveal.js</a></p>
+					<p>Seuraavaksi luotiin tämän kirjaston alle uusi HTML-sivu, joka käyttää reveal.js:n skriptejä ja CSS-tyylimäärityksiä esitysmäisen ulkoasun luomiseen.</p>
+				</section>
+				<section>
+					<p>Viimeiseksi lähetettiin HTML-sivu reveal.js-kirjaston kanssa GitHubiin joko nimellä username.github.io (henkilökohtainen sivu) tai nimellä username.github.io/projektinnimi.</p>
+					<p>Projektin alla käytetyissä GitHub Pageissa sivusto tulee sijoittaa gh-pages haaran alle.</p>
+					<br>
+					<a href="#/2">
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+					</a>
+					</section>
 			</section>
- 
+			<section id="slide4">
+				<section>
+				<h3>Jatkoa</h3>
+				<p>Tähän tulee jatkossa asiaa kurssin tulevista tehtävistä...</p>
+				</section>
+			</section>
 			</div>
 	</div>
 	<script src="lib/js/head.min.js"></script>
