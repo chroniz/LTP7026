@@ -19,29 +19,30 @@
  
 			<!-- ALL SLIDES GO HERE -->
 			<!-- Each section element contains an individual slide -->
-			<section id="slide1">
+			<section id="index">
 				<h1>Antin loki</h1>
-				<h2>LTP7026 Verkkosovelluskehitys</h3>		
+				<h2>LTP7026 Verkkosovelluskehitys</h2>		
+				<p><a href="#/aloitus">[Aloitus]</a> — <a href="#/ghpages">[GitHub Pages|reveal.js]</a> —
+				<a href="#/verkkoproto">Verkkoprotokollat</a></p>
 			</section>
  
-			<section id="slide2">
+			<section id="aloitus">
 				<h2>Orientoituminen aiheeseen</h1>
 				<p>Tällä sivustolla pidän kirjaa Verkkosovelluskehitys-kurssilla käydyistä asioista.</p>
 			</section>
  
-			<section id="slide3">
+			<section id="ghpages">
 				<section>
 					<h3>GitHub Pages ja reveal.js</h1>
 					<p>Yksi kurssin ensimmäisistä tehtävistä oli valjastaa käyttöön GitHub Pages lokin pitämistä varten.</p>
 					<p>Gh-pagesissa käytettiin myös reveal.js kirjastoa, jolla voidaan tehdä moderneja, selaimessa ajettavia esityksiä.</p>
 					<a href="#" class="navigate-down">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-					</a>
+					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
 				</section>
 				<section>
 					<p>Aluksi luotiin GitHub Pagesiin oma repository nimellä username.github.io. Tämän repositoryn alle luotu HTML-sivu näkyy sellaisenaan siirryttäessä</p>
 					<p>kyseiseen osoitteeseen, esim. <a href="http://chroniz.github.io/LTP7026">chroniz.github.io/LTP7026</a></p>
-					</section>
+				</section>
 				<section>
 					<p>Reveal.js asennettiin kloonaamalla tai lataamalla kirjasto GitHubista: <a href="https://github.com/hakimel/reveal.js">hakimel/reveal.js</a></p>
 					<p>Seuraavaksi luotiin tämän kirjaston alle uusi HTML-sivu, joka käyttää reveal.js:n skriptejä ja CSS-tyylimäärityksiä esitysmäisen ulkoasun luomiseen.</p>
@@ -53,15 +54,100 @@
 					<a href="#/2">
 					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
 					</a>
-					</section>
-			</section>
-			<section id="slide4">
-				<section>
-				<h3>Jatkoa</h3>
-				<p>Tähän tulee jatkossa asiaa kurssin tulevista tehtävistä...</p>
 				</section>
 			</section>
-			</div>
+			<section id="verkkoproto">
+				<section>
+					<h3>Tunnettuja verkkoprotokollia</h3>
+					<p>Viikon kaksi tehtäväksi tuli poimia omasta mielestään tärkeimpiä verkkoprotokollia ja kertoa niistä lyhyesti.</p>
+					<p><a href="#/IP">IP</a> - <a href="#/TCP">TCP</a> - <a href="#/UDP">UDP</a> - 
+					<a href="#/SSH">SSH</a> - <a href="#/SSH">TLS</a> - <a href="#/IRC">IRC</a></p>
+					<a href="#" class="navigate-down">
+					<img width="75" height="100" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+				</section>
+				<section id="IP">
+					<h3>IP</h3>
+					<p>IP on verkkoprotokolla, joka toimii perustana kaikille muille verkkoprotokollille. </p>
+						<p>Tiivistettynä IP-protokolla on alemman tason protokolla, joka vastaa päätelaitteiden osoitteistamisesta ja siitä, miten paketit lähetetään pisteestä A perille pisteeseen B. </p>
+				</section>
+				<section>
+					<h3>IP</h3>
+					<p>IP-paketit toimitetaan perille yksilöllisten IP-osoitteiden perusteella. IP-osoite on numerosarja tyyliin 192.168.1.1 (IPv4-standardi)
+					tai 2002:a00::260:1dff:fe22:5a85/64 (Ipv6-standardi).</p>
+					<p>IP-pakettien perille vieminen vaatii reitittämistä, minkä reitittimet hoitavat reititysprotokollien välittämän tiedon avulla IP-osoitteiden sijaintipaikoista Internetissä ja lyhyimmistä reiteistä näiden välillä.</p>
+				</section>
+				<section id="TCP">
+					<h3>TCP</h3>
+					<p>TCP on tietoliikenneprotokolla, jolla luodaan yhteyksiä internetiin kytkettyjen päätelaitteiden välille. 
+						<p>TCP-protokollassa on varmistuksia ja erilaisia vuonvalvonta- ja ruuhkanhallintamekanismeja pitämään huolta siitä, että paketit saapuvat luotettavasti perille oikeassa järjestyksessä. Tarvittaessa kadonneet paketit voidaan lähettää näin ollen uudelleen.</p>
+				</section>
+				<section>
+					<h3>TCP/IP</h3>
+					<p>TCP/IP on nimensä mukaisesti TCP- ja IP-protokollan yhdistelmä. IP-protokollan päällä ajetaan muita verkko- ja kuljetuskerroksen protokollia, joisa yleisin on TCP. </p>
+					<p>Pääosa internetin liikennöinnistä tapahtuu TCP-yhteyksinä IP-protokollien päällä</p>
+				</section>
+				<section id="UDP">
+					<h3>UDP</h3>
+					<p>UDP on tietoliikenneprotokolla, mikä mahdollistaa tietojen siirron eri laitteiden välillä, mutta ei vaadi näiden välille
+					vahvistettua yhteyttä. </p>
+					<p>Toisin kuin TCP, UDP ei varmista paketin pääsyä perille asti. UDP:n käsittely vie palvelimilta vähemmän kuormaa, sillä siinä ei suoriteta alkukättelyä, pakettien kuittausta ja kolmivaiheista yhteyden lopetusta TCP:n tapaan.</p>
+				</section>
+				<section>
+					<h3>UDP</h3>
+					<p><p>UDP-protokollaan käytetään yleisesti DNS-pyyntöjen lähettämiseen, reaaliaikaisen videon ja äänen välittämiseen, verkkopelien datan siirtoon sekä P2P-liikenteen siirtoon.</p>
+				</section>
+				<section id="SSH">
+					<h3>SSH</h3>
+					<p>SSH eli Secure Shell on kryptografinen suojausprotokolla, jota käytetään tietoliikenteen salaamiseen. Sen yleisin käyttötapa on etäyhteyksissä.</p> <p>SSH-asiakasohjelmalla muodostetaan yhteys SSH-palvelimeen, jolloin toista konetta voidaan käyttää esim. merkkipohjaisen konsolin avulla. 
+					<p>SSH:n toiminta perustuu suojausalgoritmeihin (esim AES, RSA, Blowfish, millä suojattava tieto muunnnetaan ei-selkokieliseksi mahdollisesti ulkopuolisille liikenteen havaitseville tahoille.</p>
+				</section>
+				<section>
+					<h3>SSH</h3>
+					<p>SSH:lla voidaan myös suojata muuta liikennettä, kuten FTP- ja HTTP-liikennettä. SSH on suositeltu vaihtoehto vanhempien tietoliikenneyhteyksien, kuten rlogin, telnet, rsh, rcp rdistin korvaajiksi, sillä niiden suojaustaso on heikko.</p>
+					<p>SSH:n ensimmäisen version kehitti vuonna 1995 tekniikan lisensiaatti Tatu Ylönen teknillisessä korkeakoulussa.</p>
+					<p>SSH-asiakasohjelma löytyy oletuksena useimpien Unix-sukuisten käyttöjärjestelmien asennuksessa.</p>
+				</section>
+				<section id="TLS">
+					<h3>TLS</h3>
+					<p>TLS eli Transpport Layer Security tunnettiin aiemmin nimellä Secure Sockets Layer (SSL). Se on salausprotokolla, jolla suojataan Internet-sovellusten tietoliikenne IP-verkkojen yli. </p>
+					<p>TLS:n yleisin käyttötapa on suojata WWW-sivujen siirto HTTP:llä, jolloin puhutaan HTTPS:sta.</p>
+				</section>
+				<section>
+					<h3>TLS</h3>
+					<p>TLS:n toiminta perustuu kolmannen osapuolen myöntämiin varmenteisiin, millä todistetaan, että käyttäjän vieraileman verkkosivuston identiteetti on oikea. TLS on erityisesti käytössä verkkosivustojen kirjautumisissa ja maksunvälityksissä.</p>
+				</section>
+				<section>
+					<h3>TLS</h3>
+					<p>TLS eli Transpport Layer Security tunnettiin aiemmin nimellä Secure Sockets Layer (SSL). Se on salausprotokolla, jolla suojataan Internet-sovellusten tietoliikenne IP-verkkojen yli. </p>
+					<p>TLS:n yleisin käyttötapa on suojata WWW-sivujen siirto HTTP:llä, jolloin puhutaan HTTPS:sta.</p>
+				</section>
+				<section>
+					<h3>TLS</h3>
+					<p>TLS:n salaus käyttää ns. julkisen avaimen ja symmetrisen avaimen salaustekniikkaa. Julkisen avaimen salaus käyttää avainparia: julkista avainta ja omaa avainta. </p>
+					<p>Toisella avaimella salattujen tietojen salaus voidaan purkaa vain toisella avaimella. Esimerkiksi julkisella avaimella salattujen tietojen salaus voidaan purkaa vain omalla avaimella. Kunkin palvelimen julkinen avain julkistetaan ja oma avain pidetään salaisena. Työasema lähettää suojatun sanoman palvelimeen salaamalla sanoman palvelimen julkisen avaimen avulla. Vastaanotettuaan sanoman palvelin purkaa sen salauksen oman avaimen avulla.</p>
+				</section>
+				
+				<section id="IRC">
+					<h3>IRC</h3>
+					<p>IRC eli Internet Relay Chat on internetin pikaviestintäpalvelu, joka mahdollistaa reaaliaikaisen keskustelun internet-käyttäjien välillä. Keskustelut käydään kirjoittamalla tekstiä ja lukemalla näytöltä muiden kirjoittamia viestejä. IRC:iin kirjaudutaan joko erillisillä asiakasohjelmilla tai web-pohjaisten toteutusten kautta.</p>
+					<p>IRC:n kehitti Jarkko Oikarinen vuonna 1988 korvaamaan OuluBox BBS:n MUT-ohjelman. Sittemmin IRC:n suosio kasvoi ja siitä tuli kansainvälisesti merkittävä varsinkin IT-teknologian harrastajien välisessä viestinnässä. IRC toimikin osaltaan pohjana moderneille, sosiaalisen median viestintävälineille.</p>
+				</section>
+				<section>
+					<h3>IRC</h3>
+					<p>IRC itsessään toimii TCP/IP:n päällä. Käyttäjä ottaa yhteyden IRC-palvelimeen asiakasohjelmalla. IRC-palvelimet muodostavat keskenään IRC-verkkoja. Käyttäjille määritetään nimimerkki, joka toimii uniikkina tunnistimena. Ryhmäkeskustelut tapahtuvat kanavilla, esim. #karelia-test. Kanavat ovat eräänlaisia keskusteluhuoneita, joissa voidaan käsitellä jäsenten valitsemaa aihetta, kuten harrastusta ja paikkakuntaa.</p> 
+				</section>
+				<section>
+					<h3>IRC</h3>
+					<p>IRC:n käyttäjä saa viestejä ainoastaan ollessaan kytkeytyneenä palvelimeen, eli jatkuva paikallaolo IRC:ssä vaatii asiakasohjelman ajamista jatkuvasti, tai käyttämällä ns. bouncer-ohjelmalla, joka toimii välityspalvelimena ja kerää käyttäjän viestejä poissaolon aikana.</p>
+				</section>
+			</section>
+			<section id="jatkoa">
+				<section>
+				<h3>Jatkoa</h3>
+				<p>Tähän tulee jatkossa asiaa kurssin tulevista osioista...</p>
+				</section>
+			</section>
+		</div>
 	</div>
 	<script src="lib/js/head.min.js"></script>
 	<script src="js/reveal.js"></script>
